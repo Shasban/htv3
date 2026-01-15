@@ -1,0 +1,55 @@
+<div class="relative isolate pt-0 pb-20 sm:pb-32 sm:pt-32 px-6  lg:px-">
+  <div class="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl" aria-hidden="true">
+    <div class="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+    </div>
+  </div>
+  <div class="mx-auto max-w-7xl px-6 lg:px-32">
+    <div class="mx-auto max-w-4xl text-center">
+      <p class="mt-2 text-4xl  font-medium tracking-tight text-gray-900 sm:text-5xl"> {{section.title}}
+      </p>
+    </div>
+    <div class="isolate mx-auto mt-20 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      {% for plan in section.plans %}
+      <div class="rounded-3xl p-8 xl:p-10 ring-2 ring-primary-600 bg-white">
+        <div class="flex items-center justify-between gap-x-4">
+          <h3 id="tier-startup" class="text-2xl font-bold  leading-8">{{plan.name}}</h3>
+        </div>
+        <p class="text-sm leading-6 text-gray-600">{{plan.text}}</p>
+        <p class="mt-4">
+          <span class="text-4xl  font-bold tracking-tight text-gray-900">{{plan.price}}</span>
+        </p>
+        <p>
+          <span class="text-sm font-semibold leading-6 text-gray-600">{{plan.price_text | markdownify}}</span>
+        </p>
+
+        <div class="h-px mt-8 flex-auto bg-gray-200"></div>
+        <div class="flex flex-col">
+
+          <ul role="list" class="mt-4 space-y-3 text-sm leading-6 text-gray-600 xl:mt-8 h-100">
+
+            {% for item in plan.items%}
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-primary-600" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd" />
+              </svg>
+              {{item.text | markdownify}}
+            </li>
+            {% endfor %}
+          </ul>
+
+          <!-- <div class="h-px mt-4 flex-auto bg-gray-100"></div> -->
+          <a href="#" aria-describedby="tier-startup"
+            class="mt-auto block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 bg-primary-600 text-white shadow-sm hover:bg-primary-500">Request
+            a Demo</a>
+        </div>
+
+        <small class="text-gray-700 font-light block mt-4">{{plan.footnote | markdownify}}</small>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

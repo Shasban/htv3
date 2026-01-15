@@ -1,0 +1,28 @@
+<div class="bg-white py-10   isolate relative md:-mt-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{section.title}}</h2>
+      <p class="mt-6 text-base leading-7 text-gray-600"></p>
+    </div>
+    <div class="mx-auto mt-10 sm:mt-16 items-end grid  grid-cols-1 lg:grid-cols-12 gap-8 lg:mx-0 lg:mt-20 lg:max-w-none">
+      {% for item in section.workflows %}
+      <a href="#{{item.id}}"
+        class="flex md:flex-col-reverse  justify-between gap-x-16 gap-y-8 rounded-2xl p-5 lg:p-8 flex-col items-start h-max	 {{item.class}}">
+        <p class="flex-none text-2xl lg:text-3xl mb-0 font-bold tracking-tight {{item.text-color}}">{{item.title}}</p>
+        <div class=" sm:shrink lg:w-auto lg:flex-none">
+          {{item.text | markdownify}}
+          {% if item.read_more %}
+          <a class="inline-flex gap-0.5 mt-7 justify-center overflow-hidden text-sm font-medium transition {{item.text-color}} hover:text-indigo-400 dark:text-emerald-400 dark:hover:text-emerald-500"
+            href="/sdks">Read in details
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" class="mt-0.5 h-5 w-5 relative top-px -mr-1">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                d="m11.5 6.5 3 3.5m0 0-3 3.5m3-3.5h-9"></path>
+            </svg>
+          </a>
+          {% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

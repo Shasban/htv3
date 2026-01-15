@@ -1,0 +1,74 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^(?:www\.)?happytenant\.ae$ [NC]
+RewriteRule ^ https://happytenant.io%{REQUEST_URI} [L,R=301,NE]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L,QSA]
+ErrorDocument 404 /error/404.html
+RewriteCond %{HTTP_HOST} ^www\.happytenant.\.ae$
+RewriteRule ^/?$ "http\:\/\/happytenant\.ae\/" [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+Redirect 301 /home https://happytenant.io
+Redirect 301 /dashboard https://happytenant.io/happy-manager
+Redirect 301 /happytenant https://happytenant.io/happy-tenant
+Redirect 301 /happylandlord https://happytenant.io/happy-landlord
+Redirect 301 /happymaintenance https://happytenant.io/happy-maintenance
+Redirect 301 /happysnaglist https://happytenant.io/happy-snaglist
+Redirect 301 /support https://happytenant.io/contact-us
+Redirect 301 /contact https://happytenant.io/contact-us
+Redirect 301 /contactus https://happytenant.io/contact-us
+Redirect 301 /contact-us/17/happytenant-basics https://happytenant.io/contact-us
+
+Redirect 301 /privacy-policy https://happytenant.io/privacy
+Redirect 301 /resources https://happytenant.io/articles
+Redirect 301 /landing https://happytenant.io/
+
+Redirect 301 /happy-manager https://happytenant.io/product/happytenant-app.html#manager
+Redirect 301 /happy-tenant https://happytenant.io/product/happytenant-app.html#tenant
+Redirect 301 /happy-landlord https://happytenant.io/product/happytenant-app.html#landlord
+Redirect 301 /happy-maintenance https://happytenant.io/product/happytenant-app.html#vendor
+Redirect 301 /happy-snaglist https://happytenant.io/product/happytenant-app.html#inspection
+Redirect 301 /solution-for https://happytenant.io/
+
+
+Redirect 301 /product/lease- https://happytenant.io/product/lease-management
+Redirect 301 /landing https://happytenant.io/
+
+
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME}.webp -f
+RewriteRule ^/?(.+?)\.(jpe?g|png)$ /$1.$2.webp [NC,T=image/webp,E=EXISTING:1,E=ADDVARY:1,L]
+
+<IfModule mod_headers.c>
+<FilesMatch "(?i)\.(jpe?g|png)$">
+Header append "Vary" "Accept"
+</FilesMatch>
+</IfModule>
+</IfModule>
+
+
+<IfModule mod_expires.c>
+ExpiresActive on
+
+ExpiresByType image/jpg "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/webp "access plus 1 month"
+
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+
+ExpiresByType text/css "access plus 1 month"
+</IfModule>

@@ -1,0 +1,49 @@
+<div class="bg-white py-10 sm:py-12">
+  <div class="mx-auto max-w-7xl md:px-6 lg:px-8">
+    <div class="grid grid-cols-1 gap-x-12 gap-y-8 sm:gap-y-20 lg:grid-cols-2 lg:items-start mt-20">
+      <div
+        class="{% if section.image_left == true %} order-1 sm:order-1 {% else %} order-1 sm:order-2 {% endif %} px-6 lg:px-0 lg:pr-4 lg:pt-4 mt-0 lg:mt-10 sm:sticky top-6 pb-10">
+        <div class="mx-auto max-w-4xl lg:mx-0">
+          <h2 class="text-2xl sm:text-3xl  mb-2 font-bold leading-8 text-primary">{{section.title}}</h2>
+          <div class=" text-gray-600">
+            {{section.subtitle | markdownify}}
+          </div>
+          <dl
+            class="mt-10  text-base leading-7 text-gray-600 lg:max-w-none grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2 lg:gap-y-8">
+            {% for item in section.items%}
+            <div class="relative pl-9">
+              <dt class="font-semibold">
+                <img class="absolute left-0 top-1 h-8 w-8 text-primary {{item.class}}" src="{{item.icon}}" alt="">
+              </dt>
+              <dd class="font-bold pl-3">{{item.text }}</dd>
+            </div>
+            {% endfor %}
+          </dl>
+        </div>
+      </div>
+
+
+
+      <div
+        class="{% if section.image_left == true %} order-2 sm:order-2 {% else %} order-2 sm:order-1 {% endif %} sm:px-6 lg:px-0">
+        <div
+          class="relative isolate overflow-hidden px-6 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pl-16 sm:pr-0 lg:mx-0 lg:max-w-none">
+          <!-- <div class="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-[-30deg] bg-primary-100 opacity-20 ring-white" aria-hidden="true"></div> -->
+          <!-- <svg class="absolute max-w-full left-0 -z-10 w-full" width="657" height="702" viewBox="0 0 657 702"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1 679.081C1 304.598 310.19 1 684.694 1C696.919 1 707 10.9118 707 23.1149V658.26C707 666.093 706.999 671.905 706.611 676.502C706.224 681.087 705.458 684.371 703.978 687.166C701.539 691.772 697.772 695.539 693.166 697.978C690.371 699.458 687.087 700.224 682.502 700.611C677.905 700.999 672.093 701 664.26 701H22.919C10.8135 701 1 691.187 1 679.081Z"
+              stroke="#5970BA" stroke-width="2" />
+          </svg> -->
+
+
+          <div class="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
+            <img src="{{section.image}}" alt="{{section.title}}" width="2432" height="1442"
+              class="max-w-full rounded-xl ring-1 ring-white/10" />
+          </div>
+          <!-- <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 sm:rounded-3xl" aria-hidden="true"></div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

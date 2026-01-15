@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+
+{% include nav.html header=page site=site page=page %}
+<main to HappyTennatmain data-barba="container" data-barba-namespace="{{page.namespace}}">
+  {% include header.html header=page site=site page=page %}
+  {% for section in page.sections %}
+  {% include {{ section.file_name }} section=section site=site page=page %}
+  {% endfor %}
+</main>
+
+
+{{ content }}
+
+{% include footer.html section=section site=site page=page %}

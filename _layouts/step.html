@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<main data-barba="container" data-barba-namespace="{{page.namespace}}">
+
+ 
+ <section class="relative max-w-7xl mx-auto p-6 py-10">
+  <a href="{{site.baseurl}}/happytenant.io/" target="_blank" >
+    <span class="sr-only">HappyTenant</span>
+    <img class="h-14 w-auto cursor-pointer" src="/assets/img/logo.webp" alt="HappyTenant">
+ </a>
+ </section>
+
+  {% for section in page.sections %}
+    {% include {{ section.file_name }} section=section site=site page=page %}
+  {% endfor %}
+</main>
+
+{{ content }}

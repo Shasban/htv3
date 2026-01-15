@@ -1,0 +1,14 @@
+User-agent: Googlebot
+Disallow: 
+
+User-agent: googlebot-image
+Disallow: 
+
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /*?
+Disallow: /blog/*/*/*/$
+
+Sitemap: https://happytenant.io/sitemap.xml
+

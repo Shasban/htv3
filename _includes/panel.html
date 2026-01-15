@@ -1,0 +1,39 @@
+{% if section.mesh == "blue" %}
+{% assign mesh = "from-[#4bfffc] to-[#0d00ff]" %}
+{% elsif section.mesh == "red" %}
+{% assign mesh = "from-[#ff80b5] to-[#9089fc]" %}
+{% elsif section.mesh == "orange" %}
+{% assign mesh = " from-[#FFC53C] to-[#FF9700]" %}
+{% elsif section.mesh == "yellow" %}
+{% assign mesh = "from-[#E7F569] to-[#FF9700]" %}
+{% elsif section.mesh == "lime" %}
+{% assign mesh = "from-[#00FFA3] to-[#00FFD1]" %}
+{% else %}
+{% assign mesh = "from-[#4bfffc] to-[#0d00ff]" %}
+{% endif %}
+<div x-data="{ tab: 0, totalTabs: {{ section.tabs | size }} }" class="overflow-hidden bg-white  py-10 sm:py-24 xl:py-32
+  isolate relative" >
+  {% include row-panel.html %}
+  <!-- <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div class="lg:pr-8 lg:pt-4">
+        <div class="lg:max-w-lg">
+          <h2 class="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
+          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{section.title}}</p>
+          <p class="mt-6 text-lg font-light leading-8 text-gray-600">{{section.subtitle}}</p>
+          <dl class="mt-10 max-w-xl space-y-1 text-base leading-7 text-gray-600 lg:max-w-none">
+            {% for item in section.items %}
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900">
+                <img src="{{site.baseurl}}{{item.icon}}" alt="" class="absolute left-0 top-1 h-5 w-5">
+              </dt>
+              <dd class="inline">{{item.text | markdownify}}</dd>
+            </div>
+            {% endfor %}
+          </dl>
+        </div>
+      </div>
+      <img src="{{site.baseurl}}{{section.image}}" alt="{{section.title}}" class="">
+    </div>
+  </div> -->
+</div>

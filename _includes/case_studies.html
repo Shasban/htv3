@@ -1,0 +1,46 @@
+<section class="page-section {{ section.background_style }} px-6  sm:pt-32 pt-20 lg:px-8 relative overflow-hidden"
+   id="{{ section.section_id }}">
+   <div class="max-w-7xl mx-auto">
+      <div class="font-custom text-xl tracking-tight text-slate-900 sm:text-4xl font-semibold mb-5">
+         <h1>{{ section.title }}</h1>
+      </div>
+      <div class="grid md:grid-cols-3  md:gap-10 gap-5 grid-cols-1  ">
+         {% for case_study in section.case_studies %}
+         <div class="mb-5">
+            <div>
+               <div class=" mb-3">
+                  <div>
+                     <img src="assets/img/{{case_study.photo}}" alt="" class="rounded-tl-2xl rounded-tr-2xl">
+                  </div>
+                  <div>
+                     <h3 class="py-3 text-primary-300 font-medium md:text-xl text-lg"> {{ case_study.title }} </h3>
+                  </div>
+
+                  <div class="text-primary-400 md:text-base text-sm font-light">
+                     {{ case_study.text | markdownify }}
+                  </div>
+                  {% if case_study.url %}
+                  <a class="flex items-center gap-3 text-[#4052DE] text-base font-medium"
+                     href="{{ case_study.url | absolute_url }}">
+                     Read more
+                     <svg xmlns="http://www.w3.org/2000/svg" width="11.571" height="15" viewBox="0 0 11.571 20.141">
+                        <path class="right-arrow"
+                           style="fill: none; stroke: #4052DE; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3px;"
+                           d="M13.5,24.9l7.949-7.949L13.5,9" transform="translate(-11.379 -6.879)" />
+                     </svg>
+                  </a>
+                  {% endif %}
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</section>
+<div>
+   <div class="absolute top-[10%] right-0 -z-10 ">
+      <img src="{{site.baseurl}}assets/img/circle-blog.webp" alt="">
+   </div>
+   <img src="{{section.shape-one}}" alt="" class="absolute left-0 top-[22%] z-[-1]">
+   <img src="{{section.shape-two}}" alt="" class="absolute right-0 top-[40%] z-[-1]">
+</div>

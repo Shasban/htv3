@@ -1,0 +1,42 @@
+{% assign integrations = site.data.integrations %}
+
+
+
+<section id="get-started-today" class="relative overflow-hidden isolate bg-slate-900 py-20 sm:py-32 sm:min-h-[35rem]">
+  <div class="">
+    <div class="mx-auto max-w-7xl px-6 lg:px-32">
+      <div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden ring-1 ring-white/5 lg:w-full">
+        <div
+          class="absolute -left-56 top-[calc(100%-13rem)] transform-gpu blur-3xl lg:left-[max(-14rem,calc(100%-59rem))] lg:top-[calc(50%-7rem)]"
+          aria-hidden="true">
+          <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-br from-[#4bfffc] to-[#4f46e5] opacity-30"
+            style="clip-path: polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%)">
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div class="lg:pr-8 lg:pt-4">
+          <div class="lg:max-w-lg">
+            <h2 class="text-base font-semibold leading-7 text-white">Integration</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">{{section.title}}</p>
+            <p class="mt-6 text-lg leading-8 font-light text-white">{{section.subtitle}}</p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-4 items-center grid-cols-2 gap-10 relative z-30">
+          {% for item in section.integartion%}
+          <div class="" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="{{forloop.index | times: 100}}">
+            <img src="{{item.logo}}" alt="{{item.name}}"
+              class="bg-white rounded-xl p-2 object-contain  w-[95px] h-[95px] hover:scale-110 hover:shadow-lg duration-500 transition-all">
+          </div>
+          {% endfor %}
+        </div>
+        <img src="{{site.baseurl}}assets/img/big-circle-hero.svg" alt="Product screenshot"
+          class="w-[27rem] max-w-none rounded-xl absolute top-0 sm:-top-1/4 sm:-right-[10%] sm:w-[57rem] md:-ml-4 lg:-ml-0 animate-spin-slow-reverse">
+        <img src="{{site.baseurl}}assets/img/big-circle-hero.svg" alt="Product screenshot"
+          class="w-[27rem] max-w-none rounded-xl absolute top-0 sm:-top-1/4 -right-1/4 sm:w-[57rem] md:-ml-4 lg:-ml-0 animate-spin-slow	">
+        <img src="{{site.baseurl}}assets/img/inner-circle-hero.svg" alt="Product screenshot" class="w-[27rem] max-w-none rounded-xl absolute top-0 sm:-top-1/4 -right-[38%] sm:w-[57rem] md:-ml-4 lg:-ml-0 
+          animate-spin-slow-reverse">
+      </div>
+    </div>
+  </div>
+</section>

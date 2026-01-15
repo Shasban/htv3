@@ -1,0 +1,486 @@
+
+
+.header {
+  height: calc(100vh - 110px);
+  @media (max-width: 768px) {
+    height: auto;
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spin-reverse 3s linear infinite;
+}
+
+.inline p {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.mySwiper .swiper-slide {
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.awards-swiper h3 {
+  font-size: 50px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+.awards-swiper p {
+  font-size: 16px;
+}
+
+.inline p {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.floating {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+#header_img{
+  img{
+    object-position: 0px -1px;
+  }
+}
+
+#header_imgs_target{
+
+  // >div {
+  //   position: relative !important;
+  //   opacity: 1 !important;
+  //   transform: translate(0,0) !important;
+  // }
+
+  img {
+    max-width: 95px !important;
+    // opacity: 1;
+  }
+}
+
+#clients{
+  img{
+    max-height: 80px !important;
+  }
+
+}
+
+.swiper{
+  overflow: visible !important;
+}
+#tenant_box{
+  rect{
+    fill: transparent;
+    stroke: #3833E3;
+    transition: all 0.3s;
+    
+  }
+  .icon{
+    path{
+      stroke: #3833E3;
+    }
+    
+  }
+  &.active, &:hover{
+    
+    rect{
+      fill: #3833E3;
+      stroke: #3833E3;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+}
+#maintenance_box{
+  rect{
+    fill: transparent;
+    stroke: #64748B;
+    transition: all 0.3s;
+  }
+  .icon{
+    path{
+      stroke: #64748B;
+    }
+  }
+  &.active, &:hover{
+    rect{
+      fill: #64748B;
+      stroke: #64748B;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+
+}
+#property_box{
+  rect{
+    fill: transparent;
+    stroke: #F57B1F;
+    transition: all 0.3s;
+  }
+  .icon{
+    path{
+      stroke: #F57B1F;
+    }
+  }
+  &.active, &:hover{
+    rect{
+      fill: #F57B1F;
+      stroke: #F57B1F;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+
+}
+#work_order_box{
+  rect{
+    fill: transparent;
+    stroke: #64748B;
+    transition: all 0.3s;
+  }
+  .icon{
+    path{
+      stroke: #64748B;
+    }
+  }
+  &.active, &:hover{
+    rect{
+      fill: #64748B;
+      stroke: #64748B;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+
+}
+#v1{
+  rect{
+    fill: transparent;
+    stroke: #07D093;
+    transition: all 0.3s;
+  }
+  .icon{
+    path{
+      stroke: #07D093;
+    }
+  }
+  &.active, &:hover{
+    rect{
+      fill: #07D093;
+      stroke: #07D093;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+
+}
+#v2{
+  rect{
+    fill: transparent;
+    stroke: #07D093;
+    transition: all 0.3s;
+  }
+  .icon{
+    path{
+      stroke: #07D093;
+    }
+  }
+  &.active, &:hover{
+    rect{
+      fill: #07D093;
+      stroke: #07D093;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+
+}
+#v3{
+  rect{
+    fill: transparent;
+    stroke: #07D093;
+    transition: all 0.3s;
+  }
+  .icon{
+    path{
+      stroke: #07D093;
+    }
+  }
+  &.active, &:hover{
+    rect{
+      fill: #07D093;
+      stroke: #07D093;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+
+}
+#line_1{
+  stroke-dasharray: 275px;
+  stroke-dashoffset: 0;
+}
+#line_2{
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 0;
+}
+#line_3{
+  stroke-dasharray: 450px;
+  stroke-dashoffset: 0;
+}
+#line_5{
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 0;
+}
+#line_4{
+  stroke-dasharray: 275px;
+  stroke-dashoffset: 0;
+}
+
+#pm_box{
+  rect{
+    fill: transparent;
+    stroke: #F57B1F;
+    transition: all 0.3s;
+  }
+  .icon{
+    path{
+      stroke: #F57B1F;
+    }
+  }
+  &.active, &:hover{
+    rect{
+      fill: #F57B1F;
+      stroke: #F57B1F;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+
+}
+#relevant_inspector{
+  rect{
+    fill: transparent;
+    stroke: #07D093;
+    transition: all 0.3s;
+  }
+  .icon{
+    path{
+      stroke: #07D093;
+    }
+  }
+  &.active, &:hover{
+    rect{
+      fill: #07D093;
+      stroke: #07D093;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+
+}
+#general_inspection{
+  rect{
+    fill: transparent;
+    stroke: #64748B;
+    transition: all 0.3s;
+  }
+  .icon{
+    path{
+      stroke: #64748B;
+    }
+  }
+  &.active, &:hover{
+    rect{
+      fill: #64748B;
+      stroke: #64748B;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+
+}
+#start{
+  rect{
+    fill: transparent;
+    stroke: #07D093;
+    transition: all 0.3s;
+  }
+  .icon{
+    path{
+      stroke: #07D093;
+    }
+  }
+  &.active, &:hover{
+    rect{
+      fill: #07D093;
+      stroke: #07D093;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+
+}
+#relevant_image{
+  rect{
+    fill: transparent;
+    stroke: #9747FF;
+    transition: all 0.3s;
+  }
+  .icon{
+    path{
+      stroke: #9747FF;
+    }
+  }
+  &.active, &:hover{
+    rect{
+      fill: #9747FF;
+      stroke: #9747FF;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+
+}
+#end{
+  rect{
+    fill: transparent;
+    stroke: #FFC53C;
+    transition: all 0.3s;
+  }
+  .icon{
+    path{
+      stroke: #FFC53C;
+    }
+  }
+  &.active, &:hover{
+    rect{
+      fill: #FFC53C;
+      stroke: #FFC53C;
+    }
+    .icon{
+      path{
+        stroke: white;
+      }
+    }
+  }
+
+}
+#line-1{
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 0;
+}
+#line-2{
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 0;
+}
+#line-3{
+  stroke-dasharray: 120px;
+  stroke-dashoffset: 0;
+}
+#line-5{
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 0;
+}
+#line-4{
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 0;
+}
+#line-5{
+  stroke-dasharray: 100px;
+  stroke-dashoffset: 0;
+}
+#line-6{
+  stroke-dasharray: 150px;
+  stroke-dashoffset: 0;
+}

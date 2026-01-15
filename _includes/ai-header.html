@@ -1,0 +1,43 @@
+<header class="mb-20">
+
+  <div class="grid grid-cols-1 gap-10 isolate min-h-[35rem] max-w-7xl mx-auto header">
+
+    <div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden  lg:w-full">
+      <div
+        class="absolute -left-56 top-[calc(100%-13rem)] transform-gpu blur-3xl from-[#4bfffc] to-[#0d00ff] lg:left-[max(-14rem,calc(100%-59rem))] lg:top-[calc(50%-20rem)]"
+        aria-hidden="true">
+
+        <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-br  opacity-50"
+          style="clip-path: polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%)">
+        </div>
+
+      </div>
+      <div
+        class="absolute -right-56 top-[calc(100%-13rem)] transform-gpu blur-3xl -rotate-90 lg:right-[max(-14rem,calc(100%-30rem))] lg:top-[calc(50%-7rem)]"
+        aria-hidden="true">
+        <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-br {{mesh}} opacity-50"
+          style="clip-path: polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%)">
+        </div>
+      </div>
+    </div>
+
+    <div class="mx-auto px-6 pt-20 lg:px-32">
+      {% if page.header.image %}
+      <div class=" absolute left-1/2 top-[30%] md:top-[45%] -translate-x-1/2 -translate-y-1/2  z-50 ">
+        <img src="{{site.baseurl}}{{page.header.image}}" alt="" class="w-[10rem] mx-auto floating">
+      </div>
+      <div
+        class=" absolute left-1/2 -top-[10%] -translate-x-1/2 -translate-y-[15%] md:-translate-y-1/2 -z-10 overflow-hidden">
+        <img src="{{site.baseurl}}assets/img/big-circle-hero.svg" alt="Product screenshot"
+          class="w-[300px] max-w-none rounded-xl md:w-[40rem]  lg:w-[60rem] animate-spin-slow">
+      </div>
+      <!-- <div class="isolate absolute left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2">
+        <img src="{{site.baseurl}}assets/img/ai-thinking.svg" alt="Product screenshot"
+          class="w-[48rem] max-w-none rounded-xl -z-10 sm:w-[35rem] pulse floating">
+      </div> -->
+    </div>
+    {% endif %}
+    {% include prompt.html%}
+  </div>
+  </div>
+</header>

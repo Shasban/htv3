@@ -1,0 +1,70 @@
+<section id="features" aria-label="Features for running your books"
+   class="relative overflow-hidden  pb-28 pt-20 sm:py-32 ">
+   <img class="absolute left-1/2 top-1/2 max-w-none translate-x-[-50%] translate-y-[-68%]" src="{{section.background}}"
+      alt="" width="2245" height="1736">
+   <div class="relative max-w-7xl mx-auto px-4">
+      <div class="max-w-2xl mx-auto text-center xl:max-w-none">
+         <h2 class="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+            {{section.title}}
+         </h2>
+         <p class="mt-6 text-lg tracking-tight text-blue-100">
+            {{section.description}}
+         </p>
+      </div>
+      <div x-data="{ activeTab: 0 }"
+         class="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0">
+         <div class="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-4 py-10">
+            <div
+               class="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
+               <!-- Tabs List -->
+               {% for feature in section.types %}
+               <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="{{forloop.index | times: 150}}"
+                  @click="activeTab = {{ forloop.index0 }}"
+                  :class="{ 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10': activeTab === {{ forloop.index0 }}, 'hover:bg-white/10 lg:hover:bg-white/5': activeTab !== {{ forloop.index0 }} }"
+                  class="group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6"
+                  data-aos="fade-right">
+                  <h3>
+                     <button class="font-display text-xl ui-not-focus-visible:outline-none"
+                        :class="{ 'text-blue-600 lg:text-white': activeTab === {{ forloop.index0 }}, 'text-blue-100 hover:text-white lg:text-white': activeTab !== {{ forloop.index0 }} }">
+                        <span class="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none"></span>
+                        {{ feature.title }}
+                     </button>
+                  </h3>
+                  <p class="mt-2 hidden text-sm lg:block mb-1"
+                     :class="{ 'text-white': activeTab === {{ forloop.index0 }}, 'text-blue-100 group-hover:text-white': activeTab !== {{ forloop.index0 }} }">
+                     {{ feature.description }}
+                  </p>
+                  <!-- <a href="{{feature.url}}" class="text-white text-sm font-light underline">{{site.data.shared.read_more}}</a> -->
+               </div>
+               {% endfor %}
+            </div>
+         </div>
+         <div class="lg:col-span-8" data-aos="fade-left">
+            <!-- Tabs Panels -->
+            {% for feature in section.types %}
+            <div x-show="activeTab === {{ forloop.index0 }}" class="tab-panel"
+               x-transition:enter="transform ease-out duration-1000 transition"
+               x-transition:enter-start="translate-x-2 opacity-0 sm:translate-x-1/3"
+               x-transition:enter-end="translate-x-0 opacity-100 sm:translate-x-0"
+               x-transition:leave="transition ease-in duration-0"
+               x-transition:leave-start="opacity-100 sm:translate-x-0"
+               x-transition:leave-end="opacity-0 sm:translate-x-2">
+               <div class="relative sm:px-6 lg:hidden">
+                  <div
+                     class="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl">
+                  </div>
+                  <p class="relative mx-auto max-w-2xl text-base text-white sm:text-center">
+                     {{ feature.description }}
+                  </p>
+               </div>
+               <div
+                  class="mt-10 md:w-[45rem] w-full overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                  <img class="w-full" src="{{ feature.image }}" alt=""
+                     sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem">
+               </div>
+            </div>
+            {% endfor %}
+         </div>
+      </div>
+   </div>
+</section>

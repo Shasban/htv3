@@ -1,0 +1,13 @@
+<div class="mx-auto mt-20 max-w-7xl text-center items-center z-50">
+  <h1 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">{{ page.header.title }}</h1>
+  <div class="mt-6 flex w-full justify-center px-10">
+    <form id="openai-form" class="w-full flex rounded mb-4">
+      <textarea id="prompt" name="prompt"
+        class="w-full rounded-l-md border-1 p-[16px] h-[60px] border-gray-300 bg-white px-3.5 text-black focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+        placeholder="Type your prompt here..."></textarea>
+      <button type="submit"
+        class="rounded-r-md bg-primary px-3.5 py-2 text-sm font-semibold text-white hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Submit</button>
+    </form>
+  </div>
+  <div id="response" class="mt-4"></div>
+</div>

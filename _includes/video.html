@@ -1,0 +1,46 @@
+<div>
+
+  <div class="relative z-50" role="dialog" aria-modal="true" @keydown.window.escape="openVideo = false; videoUrl = ''"
+    x-show="openVideo" x-ref="dialog" x-cloak>
+    <!-- Background backdrop, show/hide based on slide-over state. -->
+    <div class="fixed inset-0 bg-gray-400/50" x-show="openVideo"></div>
+
+    <div class="fixed inset-0 overflow-hidden">
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10 sm:pl-16 ">
+
+          <div class="pointer-events-auto w-screen max-w-7xl" x-show="openVideo"
+            x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700"
+            x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
+            x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700"
+            x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full"
+            @click.away="openVideo = false; videoUrl= ''">
+            <div class="flex h-full relative flex-col overflow-y-scroll bg-white shadow-xl">
+              <div class="px-4 absolute top-0 right-0 py-6 sm:px-6 left-0 z-10">
+                <div class="flex items-start justify-end">
+                  <div class="ml-3 flex h-7 items-center">
+                    <button type="button" @click="openVideo = false; videoUrl= ''"
+                      class="relative bg-white text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500">
+                      <span class="absolute -inset-2.5"></span>
+                      <span class="sr-only">Close panel</span>
+                      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Main -->
+              <div class="h-screen">
+                <iframe class="ratio ratio-16x9 w-full h-full" width="100%" :src="videoUrl"
+                  src="{{site.data.shared.video}}" frameborder="0" allow="autoplay; encrypted-media"
+                  allowfullscreen=""></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

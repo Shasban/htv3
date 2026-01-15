@@ -1,0 +1,60 @@
+url: "http://happytenant.io" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/htv3/_site/"
+baseurl: "/"
+title: "HappyTenant"
+logo: "assets/images/logo.png"
+# port: 3010
+
+logo_white: logo-white.svg
+logo: logo.webp
+
+postcss:
+  cache: false
+
+sass:
+  indentWidth: 2
+  style: compact
+  precision: 9
+  sourcemap: never
+
+collections:
+  categories:
+    output: true
+
+# languages: ["en", "ar"]
+# default_lang: "en"
+# exclude_from_localization: ["javascript", "images", "_sass", "public"]
+# parallel_localization: true
+
+plugins:
+  - jekyll-postcss
+  # - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  # - jekyll-polyglot
+
+include:
+  - assets
+  - ".htaccess"
+  - "sitemap.xml"
+  
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# jekyll_admin:
+#   hidden_links:
+#     - posts
+#     - pages
+#     - staticfiles
+#     - datafiles
+#     - configuration
+#   homepage: "pages"

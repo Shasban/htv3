@@ -1,0 +1,235 @@
+- title: Product
+  url: "#"
+  show_cta: false
+  with_icons: false
+  with_heading: true
+  subnav:
+    - heading: '<div class="md:block hidden">One EcoSystem powered by <span class="text-primary">RiaAI</span></div>'
+      feature: true
+      button_text: "Discover More"
+      description: "HappyTenant brings together everything you need to manage your properties efficiently—from lease automation to property finance and communication. It is a one-stop solution for all your property management needs."
+    - heading: Property Management
+      class: "border border-primary"
+      links:
+        # - title: Stats & My Day
+        #   url: "product/lease-management.html"
+        - title: Lease Management
+          url: "product/lease-management.html"
+        - title: Facility Management
+          url: "product/facility-management.html"
+        - title: Reporting & Analytics
+          url: "product/reporting-and-analytics.html"
+        - title: Community Management
+          url: "product/community-management.html"
+        # - title: Team Management
+        #   url: "product/team-management.html"
+        - title: Property Management Accounting
+          url: "product/accounting-and-reporting.html"
+
+    # - heading: Vertical Solutions
+    #   class: "border border-primary"
+    #   links:
+    #     - title: CRM
+    #       url: "product/crm-and-sales-management.html"
+    #     - title: HappySnaglist
+    #       url: "product/crm-and-sales-management.html"
+    #     - title: Listing Syndicate
+    #       url: "product/crm-and-sales-management.html"
+    - heading: HappyTenant+ App
+      class: "border border-primary"
+      links:
+        - title: Manager App
+          url: "product/happytenant-app.html#manager"
+        - title: Landlord App
+          url: "product/happytenant-app.html#landlord"
+        - title: Tenant App
+          url: "product/happytenant-app.html#tenant"
+        - title: Vendor App
+          url: "product/happytenant-app.html#vendor"
+
+        - title: Inspection App
+          url: "product/happytenant-app.html#inspection"
+
+    - heading: Integrations
+      class: "border border-primary"
+      links:
+        - title: Payment Gateways Integrations
+          url: "product/crm-and-sales-management.html#payment"
+        - title: Accounting Integrations
+          url: "product/crm-and-sales-management.html#accounting"
+        - title: Communications Integrations
+          url: "product/crm-and-sales-management.html#listing "
+
+  # subnav:
+  #   - title: Overview
+  #     url: "happy-manager.html"
+  #     description: Property management made easy
+  #     icon: "assets/img/hm_logo.webp"
+
+  #   - title: Tenant App
+  #     url: "happy-tenant.html"
+  #     description: Hassle-free tenant management
+  #     icon: "assets/img/ht_logo.webp"
+
+  #   - title: Landlord Portal & App
+  #     url: "happy-landlord.html"
+  #     description: Landlord portfolio insights at fingertips
+  #     icon: "assets/img/hl_logo.webp"
+
+  #   - title: Maintenance Portal & App
+  #     url: "happy-maintenance.html"
+  #     description: Vendor communication streamlined
+  #     icon: "assets/img/hma_logo.webp"
+
+  #   - title: Snaging App
+  #     url: "happy-snaglist.html"
+  #     description: Simplified, faster, accurate inspections
+  #     icon: "assets/img/hs_logo.webp"
+
+# - title: Solutions For
+#   url: "#"
+#   show_cta: false
+#   with_icons: false
+#   with_heading: true
+#   subnav:
+#     - heading: 'One EcoSystem powered by <span class="text-primary">RiaAI</span>'
+#       feature: true
+#       description: "Our AI-powered platform is designed to help you manage your property portfolio efficiently and effectively. It is a one-stop solution for all your property management needs."
+#       url: "product/lease-management.html"
+
+#     - heading: Market Segments
+#       class: 'border border-primary'
+#       links:
+#         - title: Residential
+#           url: "product/lease-management.html"
+#         - title: Commercial
+#           url: "product/lease-management.html"
+#         - title: Student Accommodation
+#           url: "product/accounting-and-reporting.html"
+#         - title: Warehouse
+#           url: "product/facility-management.html"
+
+- title: HappyTenant
+  url: "#"
+  show_cta: false
+  with_icons: false
+  with_heading: true
+  subnav:
+    - heading: HappyTenant HQ
+      span_class: "lg:col-span-1"
+      class: ""
+      links:
+        - title: About HappyTenant
+          url: "about-us.html"
+        - title: Our Happy Journey
+          url: "about-us.html#journey"
+
+        - title: Customer Stories
+          url: "about-us.html#testimonials"
+
+        - title: Our Footprint
+          url: "about-us.html#footprint"
+
+        - title: Our Clients
+          url: our-clients.html  
+
+        # - title: Careers
+        #   url: "careers.html"
+
+    - heading: "About HappyTenant"
+      feature: true
+      span_class: "lg:col-span-1"
+      class: "border border-blue-400 hover:border-primary"
+      button_text: "Read About Us"
+      description: "HappyTenant is redefining property management through technology. As a leading PropTech platform, we empower real-estate businesses to replace outdated processes with intelligent, automated systems—bringing clarity, control, and scalability to every aspect of property operations. "
+      url: "about-us.html"
+
+    # - heading: "Customer Stories"
+    #   feature: true
+    #   span_class: "lg:col-span-1"
+    #   class: "border border-blue-400 hover:border-primary"
+    #   button_text: "Read Our Testimonials"
+    #   description: 'HappyTennant has changed the Way of Communication with the tenants through automated reminders, visual maintenance requests and it’s easy to keep track of our activities, leases and renewals with Constant reminders. <br><br> <b>Alexandra Zisimopoulou</b> <br><span class="text-gray-500">My Vactions</span>'
+    #   url: "product/lease-management.html"
+    - heading: "What Our CEO Says"
+      feature: true
+      span_class: "lg:col-span-2"
+      class: "border border-blue-400 hover:border-primary"
+      image: "assets/img/ceo.webp"
+      # video: https://www.youtube.com/embed/7yc8ZC6k3VI?rel=0&amp;showinfo=0
+      video: https://www.youtube.com/embed/pgPcB9hKVhE?si=nX5sMkW5wL8w65BC&amp;showinfo=0
+      button_text: "Read More"
+      description: "Listen to our podcasts, watch our videos, and read our articles to stay updated with the latest trends in property management."
+      url: "press.html"
+
+- title: Resources
+  url: "#"
+  show_cta: false
+  with_icons: false
+  with_heading: true
+  subnav:
+    - heading: Resources
+      span_class: "lg:col-span-1"
+      class: ""
+      links:
+        # - title: Ask RiaAI
+        #   url: "ai.html"
+        # - title: Calculators
+        #   url: "about-us.html"
+        # - title: Podcasts
+        #   url: "product/lease-management.html"
+        - title: Blogs
+          url: "articles.html"
+        - title: Case Studies
+          url: "case_studies.html"
+        - title: Press
+          url: "press.html"
+        - title: FAQs
+          url: "faq.html" 
+
+        - title: Direct Debit
+          url: "direct_debit.html" 
+
+        
+           
+
+        # - title: HT Academy
+        #   url: "Ht-academy.html"
+
+    - heading: 'Ask <span class="text-primary">RiaAI</span>'
+      feature: true
+      span_class: "lg:col-span-1"
+      class: "border border-violet-400 hover:border-primary"
+      image: "assets/img/riaai.webp"
+      description: "Your Property Management Expert, RiaAI is here to help you with all your property management queries."
+
+    - heading: "From the Blog"
+      feature: true
+      span_class: "lg:col-span-2"
+      class: "border border-violet-400 hover:border-primary"
+      button_text: "Read Our Blog"
+      featured_blog: true
+      # image: "assets/img/podcast.webp"
+      description: "Our AI-powered platform is designed to help you manage your property portfolio efficiently and effectively. "
+      url: articles.html
+
+    # - heading: "From Our Studio"
+    #   feature: true
+    #   span_class: "lg:col-span-1"
+    #   class: 'border border-violet-400 hover:border-primary'
+    #   image: "assets/img/podcast.webp"
+    #   button_text: "Listen, Watch, Read"
+    #   description: "Listen to our podcasts, watch our videos, and read our articles to stay updated with the latest trends in property management."
+    #   url: "product/lease-management.html"
+# - title: Pricing
+#   url: "pricing.html"
+
+# - title: Contact Us
+#   url: "contact-us.html"
+
+# - title: Admin Login
+#   url: "contact.html"
+
+# - title: Request Demo
+#   url: "contact.html#contact_form"
+#   button: true

@@ -1,0 +1,135 @@
+<div class="px-6 py-12 sm:py-32 sm:pb-0 lg:px-8 relative">
+   <div class=" max-w-7xl mx-auto text-center">
+      <h1 class="text-2xl md:text-4xl lg:text-6xl sm:-mt-20 font-semibold ">
+         {{ section.title }}
+      </h1>
+      <p class=" mt-6  font-light text-lg tracking-tight max-w-3xl  mx-auto text-slate-500">
+         {{ section.subtitle }}
+      </p>
+      <div class="md:my-32 my-20">
+         <div id="about_us_header" class="about_us_header grid md:grid-cols-2 grid-cols-1 gap-5">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+               <div class="md:col-span-2">
+                  <img src="{{section.banner-img-one}}" alt="" class="w-full mb-5">
+                  <img src="{{section.banner-img-two}}" alt="" class="md:ml-auto md:w-auto w-full">
+               </div>
+               <div class="md:col-span-1 md:mt-20 mt-0">
+                  <img src="{{section.banner-img-three}}" alt="" class="w-full mb-5">
+                  <img src="{{section.banner-img-four}}" alt="" class="w-full ">
+               </div>
+            </div>
+            <div class="hidden md:grid md:grid-cols-3 grid-cols-1 gap-5 ">
+               <div class="md:col-span-2">
+                  <img src="{{section.banner-img-five}}" alt="" class="md:ml-auto md:w-auto w-full mb-5">
+                  <img src="{{section.banner-img-six}}" alt="" class="w-full ">
+               </div>
+               <div class="md:col-span-1 md:mt-20 mt-0">
+                  <img src="{{section.banner-img-seven}}" alt="" class="md:w-auto w-full">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- <div class="mx-auto max-w-7xl "> -->
+   <!--    <div class="mx-auto max-w-6xl md:text-center"> -->
+   <!--       <h2 class="font-custom  text-3xl tracking-tight text-slate-900 sm:text-4xl"> -->
+   <!--          {{section.impact-title}} -->
+   <!--       </h2> -->
+   <!--       <p class="font-custom mt-5 text-lg tracking-tight text-slate-700"> -->
+   <!--          {{section.impact-desc}} -->
+   <!--       </p> -->
+   <!--    </div> -->
+   <!--    <div class="md:mt-20 mt-10"> -->
+   <!--       <div class="grid grid-cols-2 md:grid-cols-5 gap-5"> -->
+   <!--          {% for item in section.impact-contet %} -->
+   <!--          <div class="text-center"> -->
+   <!--             <img src="{{item.image}}" alt="{{item.desc}}" class="mb-4 mx-auto" data-aos="fade-up" -->
+   <!--                data-aos-duration="800" data-aos-delay="{{forloop.index | times: 100}}"> -->
+   <!--             <div class="overflow-hidden"> -->
+   <!---->
+   <!--                <div data-aos="fade-down" data-aos-duration="800" data-aos-delay="{{forloop.index | times: 100}}"> -->
+   <!--                   <p class="text-primary-400 md:text-2xl text-lg mb-0 font-semibold">{{item.number}}</p> -->
+   <!--                   <p class="text-primary-400 text-xs mb-0">{{item.desc}}</p> -->
+   <!--                </div> -->
+   <!--             </div> -->
+   <!--          </div> -->
+   <!--          {% endfor %} -->
+   <!--       </div> -->
+   <!--    </div> -->
+   <!-- </div> -->
+   <div class="grid md:grid-cols-2 grid-cols-1 mx-auto max-w-7xl md:pt-10 pt-5  ">
+      <div>
+         <img src="{{section.passion-img}}" alt="">
+      </div>
+      <div class="md:pt-32 pt-20 ">
+         <h2 class="font-custom text-3xl tracking-tight text-slate-900 sm:text-4xl ">
+            {{section.passion-title}}
+         </h2>
+         <p class="font-custom mt-4 text-lg tracking-tight text-slate-700 font-light">
+            {{section.passion-desc}}
+         </p>
+      </div>
+   </div>
+</div>
+{% if false %}
+<section class="relative overflow-hidden  pb-28 pt-20 sm:pt-32 sm:pb-56 " id="journey">
+   <img class="absolute left-1/2 top-1/2 max-w-none translate-x-[-50%] translate-y-[-68%]" src="{{section.journey-img}}"
+      alt="" width="2245" height="1736">
+   <div class="relative">
+      <h2 class="font-custom text-3xl tracking-tight text-white sm:text-4xl font-semibold text-center">
+         {{section.certificate-title}} </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-12  align-items-start sm:mt-20 mt-10">
+         <div class="col-span-12 ">
+            <div class="swiper awards-swiper mt-0">
+               <div class="swiper-wrapper">
+                  {% for item in section.certificate-content %}
+                  <div class="swiper-slide">
+
+                     <div class="px-6">
+                        {% for items in item.certificates%}
+                        <div class="text-white px-8 pt-10 min-h-[450px]">
+                           <p>{{items.text | markdownify}}</p>
+                        </div>
+                        {% endfor %}
+                     </div>
+                     <div class="absolute w-full top-[50%]">
+                        <div class="ltr:text-left rtl:text-right border-b-2 border-white h-10 px-10 relative">
+                           <div
+                              class="rounded-full bg-secondary w-5 h-5 absolute bottom-0 left-0 translate-x-full translate-y-1/2   ">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  {% endfor %}
+               </div>
+               <div class="swiper-button-next text-white hidden sm:flex"></div>
+               <div class="swiper-button-prev text-white hidden sm:flex"></div>
+               <div class="swiper-pagination"></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+</section>
+{% endif %}
+<div>
+   <img src="{{section.shape-one}}" alt="" class="absolute left-0 top-[65%] z-[-1]">
+   <!-- <img src="{{section.shape-two}}" alt="" class="absolute right-0 top-[65%] z-[-1]"> -->
+   <svg class="absolute right-0 top-[65%] z-[-1]" width="737" height="795" viewBox="0 0 737 795" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <g filter="url(#filter0_f_1794_118)">
+         <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M513.741 620.517C637.043 620.517 737 520.561 737 397.259C737 273.956 637.043 174 513.741 174C424.467 174 347.431 226.399 311.71 302.119C304.827 300.852 297.732 300.19 290.483 300.19C226.151 300.19 174 352.341 174 416.672C174 481.004 226.151 533.155 290.483 533.155C304.808 533.155 318.528 530.569 331.204 525.839C371.622 583.112 438.313 620.517 513.741 620.517Z"
+            fill="#D5FBF3" />
+      </g>
+      <defs>
+         <filter id="filter0_f_1794_118" x="0" y="0" width="911" height="794.518" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feGaussianBlur stdDeviation="87" result="effect1_foregroundBlur_1794_118" />
+         </filter>
+      </defs>
+   </svg>
+
+</div>

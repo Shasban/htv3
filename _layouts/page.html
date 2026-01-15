@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+
+{% include nav.html header=page site=site page=page %}
+<main to HappyTennatmain data-barba="container" data-barba-namespace="{{page.namespace}}">
+  {% include header.html header=page site=site page=page %}
+  {% for section in page.sections %}
+  {% include {{ section.file_name }} section=section site=site page=page %}
+  {% endfor %}
+</main>
+
+
+<!-- include content as section -->
+{% assign content = content | strip_newlines %}
+{% if content != "" %}
+
+<section class="mx-auto max-w-7xl px-6 lg:px-32 mt-12 page-section {{ page.background_style }}">
+
+  <div class="page-container">
+    <div class="share-page mb-4 text-sm text-right flex justify-end">
+      Share on
+      <a class="mx-2"
+        href="https://twitter.com/intent/tweet?text={{ page.title }}&url=https://happytenant.io{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}"
+        rel="nofollow" target="_blank" title="Share on Twitter">
+        <svg class="h-6 w-6" fill="#00000" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+             d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
+       </svg>
+      </a>
+      <a class="mx-2" href="https://facebook.com/sharer.php?u=https://happytenant.io{{ page.url }}" rel="nofollow"
+        target="_blank" title="Share on Facebook">
+
+        <img style="width: 20px; height: 20px;" src="{{site.baseurl}}assets/img/ico-facebook.svg" alt="">
+      </a>
+      <a class="mx-2" target="_blank"
+        href="http://www.linkedin.com/shareArticle?mini=true&url=https://happytenant.io{{page.url}}&title={{page.title}}&summary={{page.text}}">
+        <img style="width: 20px; height: 20px;" src="{{site.baseurl}}assets/img/ico-linkedin.svg" alt="">
+      </a>
+    </div>
+
+    {{ content }}
+  </div>
+</section>
+
+{% endif %}
+
+{% include contact_us.html %}
+
+{% include footer.html section=section site=site page=page %}

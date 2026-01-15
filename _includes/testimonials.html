@@ -1,0 +1,56 @@
+{% assign testimonials = section.testimonials %}
+
+
+<section id="testimonials" aria-label="What our Customrs are saying"
+  class="relative overflow-hidden bg-slate-50 py-20 sm:py-32">
+  <img class="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
+    src="assets/img/testimonials.webp" alt="" width="2245" height="1636">
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl md:text-center">
+      <h2 class="font-custom  text-3xl tracking-tight text-slate-900 sm:text-4xl font-semibold">
+        Built for Growth. Trusted Worldwide.
+      </h2>
+      <p class="mt-4 text-lg tracking-tight text-slate-700">
+        Our platform is simple to use, powerful where it matters, and trusted by teams who 
+value efficiency without compromise.
+      </p>
+    </div>
+    <ul role="list"
+      class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3">
+      {% for column in section.testimonials %}
+      {% assign idx = forloop.index %}
+      <li>
+        <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+          {% for testimonial in column %}
+          <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="{{forloop.index | times: idx | times: 150}}">
+            <figure class="relative rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+              <img src="assets/img/quote-icon.svg" class="md:w-24 w-16 md:mb-0 mb-5 md:absolute left-6 top-6 opacity-5"
+                alt="Quote icon" />
+              <blockquote class="relative">
+                <p class="text-lg font-light tracking-tight text-slate-900">
+                  {{testimonial.content}}
+                </p>
+              </blockquote>
+              <figcaption class="relative mt-6 flex items-center justify-between border-t border-slate-100 pt-6">
+                <div>
+                  <div class="font-display text-base text-slate-900">
+                    {{ testimonial.name }}
+                  </div>
+                  <div class="mt-1 text-sm text-slate-500">
+                    {{ testimonial.company }}
+                  </div>
+                </div>
+                <div class="overflow-hidden rounded-full bg-slate-50">
+                  <img class="h-14 w-14 object-cover" src="{{testimonial.image}}" alt="{{ testimonial.name }}"
+                    width="56" height="56" />
+                </div>
+              </figcaption>
+            </figure>
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

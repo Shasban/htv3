@@ -1,0 +1,83 @@
+# - title: Integration Partners
+#   questions:
+
+  
+#     - question: Where can I download it from?
+#       text: >+
+#         - HappyTenant is an award-winning revolutionizing property management system that enables you to manage your property with efficiency, automation, and on the go with 4+ mobile apps for each stakeholder - integrated communication and work order management with a single platform.        
+
+#     - question: Is data secure?
+#       text: >+
+#         - HappyTenant is an award-winning revolutionizing property management system that enables you to manage your property with efficiency, automation, and on the go with 4+ mobile apps for each stakeholder - integrated communication and work order management with a single platform.        
+
+#     - question: What countries HappyTenant will works in?
+#       text: >+
+#         - HappyTenant is an award-winning revolutionizing property management system that enables you to manage your property with efficiency, automation, and on the go with 4+ mobile apps for each stakeholder - integrated communication and work order management with a single platform.        
+
+- title: Guides
+  questions:
+    - question: Why HappyTenant?
+      text: >+
+        - HappyTenant is an award-winning revolutionizing property management system that enables you to manage your property with efficiency, automation and on the go with 4+ mobile apps for each stakeholder - integrated communication and work order management with single platform.
+
+    - question: Minimum or Maximum number of units for signup?
+      text: >+
+        - HappyTenant is a SaaS pricing model - offering robust technology to manage your business. Small or grow big - we will be with you all the way.
+
+    - question: Is training required?
+      text: >+
+        - HappyTenant is simple, intuitive and easy to use, however our team will support for training and setup if needed.
+
+    - question: Where can I download it from?
+      text: >+
+        - HappyTenant is available both on apple and android app stores.
+
+    - question: Is data secure?
+      text: >+
+        - HappyTenant is fully secured cloud-based solution so you never have to worry about losing your data again. All the data will be organized and saved on cloud sever and can be downloaded at anytime from anywhere.
+
+    - question: What countries HappyTenant will works in?
+      text: >+
+        - HappyTenants has happy client around the globe and will work everywhere you go.
+
+
+- title: HappyTenant Property
+  questions:
+
+    - question: Can we delete a unit if its accidently created?
+      text: >+
+        - YES! HappyTenant allows you to delete a particular unit in your property.
+       
+
+    - question:  Can different payment types and income head be added to property?
+
+      text: >+
+        - YES, we can and it’s shown under financials tab of contract page.
+
+    - question: How renewal notices are sent? Can we manage the date of sending renewal notice?
+
+      text: >+
+        - Renewal reminders are automated base on the contract expiry date; however, you can manage the dates for reminders as per your choice too.
+    
+    - question: For commercial rentals, will the system generate VAT invoice
+      text: >+
+        - HappyTenant automatically calculate and generate VAT invoice for commercial invoices.
+       
+
+    - question:  We have a separate accounting system, can we integrate HappyTenant with that?
+
+      text: >+
+        - HappyTenant is fully compatible with other systems, we can integrate HappyTenant with any accounting system on request.
+
+
+    - question: Can we add the status for invoices or rent checks?
+
+      text: >+
+        - Tags such as received/paid, bounced, pending can be added to invoices and rent payments.
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+{% if page.header.mesh == "blue" %}
+{% assign mesh = "from-[#4bfffc] to-[#0d00ff]" %}
+{% elsif page.header.mesh == "red" %}
+{% assign mesh = "from-[#ff80b5] to-[#9089fc]" %}
+{% elsif page.header.mesh == "orange" %}
+{% assign mesh = " from-[#FFC53C] to-[#FF9700]" %}
+{% elsif page.header.mesh == "yellow" %}
+{% assign mesh = "from-[#E7F569] to-[#FF9700]" %}
+{% elsif page.header.mesh == "lime" %}
+{% assign mesh = "from-[#00FFA3] to-[#00FFD1]" %}
+{% elsif page.header.mesh == "green" %}
+{% assign mesh = "from-[#00FFA3] to-[#00FFD1]" %}
+{% else %}
+{% assign mesh = "from-[#4bfffc] to-[#0d00ff]" %}
+{% endif %}
+<div class=" absolute  inset-y-0 left-0 w-full  ring-1 ring-white/5 lg:w-full -z-10">
+  <div
+    class="absolute  -left-56 top-[calc(100%-13rem)] transform-gpu blur-3xl {{mesh}} lg:left-[max(-14rem,calc(100%-59rem))] lg:top-[calc(50%-20rem)]"
+    aria-hidden="true">
+
+    <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-br  opacity-30"
+      style="clip-path: polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%)">
+    </div>
+
+  </div>
+  <div
+    class="absolute  -right-56 top-[calc(100%-13rem)] transform-gpu blur-3xl -rotate-90 lg:right-[max(-14rem,calc(100%-30rem))] lg:top-[calc(50%-7rem)]"
+    aria-hidden="true">
+    <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-br {{mesh}} opacity-30"
+      style="clip-path: polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%)">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<header>
+
+  {% if page.header.header_style == "row" %}
+  {% include row-header.html %}
+  {% elsif page.header.header_style == "column" %}
+  {% include column-header.html %}
+  {% endif %}
+
+
+</header>

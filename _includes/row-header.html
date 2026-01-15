@@ -1,0 +1,76 @@
+<div
+  class="{{page.header.class}} header grid grid-cols-1 sm:grid-cols-4 md:gap-10 md:pb-[4%] md:pr-[4%] isolate pt-10 sm:pt-20 {% if page.header.bg %} min-h-[17rem] {% else %} md:min-h-[60rem] {% endif %}  max-w-7xl mx-auto header md:overflow-visible overflow-hidden relative">
+
+  {% if page.header.mesh %}
+  {% include mesh-bg.html %}
+  {% endif %}
+
+  <div
+    class="{% if page.header.image %}  col-span-2 {% else %} col-span-4 {% endif %} order-2 flex flex-col sm:mt-10 justify-start {% if page.header.image %} items-start {% else %} xl:items-center items-start max-w-5xl mx-auto text-center {% endif %} px-8 md:pb-0 pb-10">
+    <h1 class=" md:pt-0 pt-5 mt-6 sm:mt-0 text-2xl md:text-4xl lg:text-5xl font-semibold " data-aos="fade-right"
+      data-aos-duration="1000" data-aos-delay="{{forloop.index | times: 150}}">
+      {{ page.header.title }}
+    </h1>
+    <p class=" mt-6 max-w-xl font-light text-lg tracking-tight text-slate-500" data-aos="fade-up"
+      data-aos-duration="1000" data-aos-delay="150">
+      {{ page.header.subtitle }}
+    </p>
+    <!-- {% if page.header.ai == true %}
+    {% include prompt.html %}
+    {% endif %} -->
+    {% if page.header.action %}
+    <div class="mt-5 flex justify-center gap-x-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+      data-aos-anchor-placement="center-bottom">
+      <a class="group inline-flex items-center justify-center rounded-full py-3 px-4 text-sm  focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-primary text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900"
+        variant="solid" color="slate" href="#request-demo">
+        {{ page.header.action.primary_label}} </a>
+      {% if page.header.action.secondary_label %}
+      <a class="group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none ring-slate-200 text-slate-700 hover:text-slate-900 hover:ring-slate-300 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300"
+        variant="outline" color="slate" href="{{page.header.action.secondary_url }}">
+        {{ page.header.action.secondary_label}}
+      </a>
+      {% endif %}
+
+
+    </div>
+    {% endif %}
+  </div>
+
+  {% if page.header.image %}
+  <div
+    class="order-1 sm:order-3 col-span-2 w-full flex justify-center md:justify-end items-start min-h-[250px] sm:min-h-[auto] pointer-events-none">
+    <div id="header_imgs_container" class="-mt-2 sm:-mt-10 relative w-full">
+      <div id="header_img"
+        class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 -mt-12 sm:-mt-14">
+        <img src="{{site.baseurl}}{{page.header.image}}"  loading="lazy" alt="{{page.header.title}}"
+          class="w-[17rem] md:w-[26rem] max-w-5xl">
+      </div>
+      <div id="header_images_sm" class="absolute w-full h-full top-0 left-0">
+        {% for ui in page.header.ui_blocks %}
+        <div class="{{ui.class}} absolute z-10" data-target="flip">
+          <img src="{{site.baseurl}}{{ui.image}}" class="{{ui.width}} z-10 header_ui_blocks" alt="{{ui.alt}}">
+        </div>
+        {% endfor %}
+      </div>
+      <div class="w-full h-full scale-[115%] header_circle">
+        <img src="{{site.baseurl}}assets/img/big-circle-hero.svg" loading="lazy" alt="circle-one" class="w-full max-w-none -z-10 animate-spin-slow">
+      </div>
+      <div class="isolate absolute w-full h-full left-0 top-0 scale-95 header_circle">
+        <img src="{{site.baseurl}}assets/img/big-circle-hero.svg" loading="lazy" alt="circle-two" 
+          class="w-full h-full max-w-none -z-10 animate-spin-slow-reverse">
+      </div>
+      {% for i in (1..3) %}
+      <div class="isolate absolute w-full h-full left-0 top-0 scale-95 full_circle">
+        <img src="{{site.baseurl}}assets/img/big-circle-hero.svg" loading="lazy" alt="circle-three" 
+          class="w-full h-full max-w-none -z-10 animate-spin-slow-reverse ">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% if page.header.circle %}
+  <div class="absolute -bottom-[90%] -left-[70px] -z-10 rotate-180 hidden sm:visible">
+    <img src="{{site.baseurl}}assets/img/circle.webp" alt="no-shape">
+  </div>
+  {% endif %}
+  {% endif %}
+</div>

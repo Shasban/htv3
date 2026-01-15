@@ -1,0 +1,22 @@
+- logo: checkout.png
+  name: Checkout
+- logo: dynamics.webp
+  name: Microsoft Dynamics
+- logo: gmail.png
+  name: Gmail
+- logo: google.png
+  name: Google
+- logo: mailgun.webp
+  name: Mailgun
+- logo: network.png
+  name: Network
+- logo: oracle.webp
+  name: Oracle
+- logo: qb.png
+  name: Qb
+- logo: slack.png
+  name: Slack
+- logo: stripe.png
+  name: Stripe
+- logo: zoho.png
+  name: Zoho

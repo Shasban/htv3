@@ -1,0 +1,73 @@
+<section class="page-section {{ section.background_style }} px-6  sm:pt-32 pt-20 lg:px-8 relative overflow-hidden"
+   id="{{ section.section_id }}" id="{{ section.section_id }}">
+   <div class="max-w-7xl mx-auto md:mb-10 mb-5">
+      <!-- <div>
+         <h1 class="font-custom text-xl tracking-tight text-slate-900 sm:text-4xl font-semibold mb-5">{{ section.interview-title
+            }}</h1>
+      </div> -->
+      <div class="grid md:grid-cols-2 md:gap-10 gap-5 grid-cols-1 ">
+         {% for item in section.interview %}
+         <div class="mb-5 mt-5">
+            <div class="item media-item h-100">
+               <div>
+                  <div class="cursor-pointer h-[250px] relative" @click="openVideo = true; videoUrl = '{{item.video}}'">
+                     <div class="h-full w-full flex justify-center items-center absolute">
+                        <img src="{{site.baseurl}}{{site.data.shared.play-icon}}" alt="icon"
+                           class=" h-20 w-20 object-cover">
+                     </div>
+                     <img class="mt-auto rounded-lg h-full w-full object-cover" src="{{site.baseurl}}{{ item.photo }}"
+                        alt="{{ item.title }}">
+                  </div>
+                  <h3 class="py-3 text-primary-300 font-medium md:text-xl text-lg"> {{ item.title }} </h3>
+                  <div class="text-primary-400 md:text-base text-sm font-light">
+                     {{ item.text | markdownify }}
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+   <div class="max-w-7xl mx-auto">
+      <div>
+         <h1 class="font-custom text-xl tracking-tight text-slate-900 sm:text-4xl font-semibold mb-5">{{ section.title
+            }}</h1>
+      </div>
+      <div class="grid md:grid-cols-3 md:gap-10 gap-5 grid-cols-1 ">
+         {% for item in section.media_items %}
+         <div class="mb-5 mt-5">
+            <div class="item media-item h-100">
+               <div>
+                  <div> <img src="{{site.baseurl}}assets/img/{{item.photo}}" alt=""
+                        class="rounded-tl-2xl rounded-tr-2xl"> </div>
+                  <h3 class="py-3 text-primary-300 font-medium md:text-xl text-lg"> {{ item.title }} </h3>
+                  <div class="text-primary-400 md:text-base text-sm font-light">
+                     {{ item.text | markdownify }}
+                  </div>
+                  {% if item.url %}
+                  <a class="flex items-center gap-3 text-[#4052DE] text-base font-medium"
+                     href="{{ item.url | absolute_url }}">
+                     Read more
+                     <svg xmlns="http://www.w3.org/2000/svg" width="11.571" height="15" viewBox="0 0 11.571 20.141">
+                        <path class="right-arrow"
+                           style="fill: none; stroke: #4052DE; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3px;"
+                           d="M13.5,24.9l7.949-7.949L13.5,9" transform="translate(-11.379 -6.879)" />
+                     </svg>
+                  </a>
+                  {% endif %}
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+
+</section>
+<div>
+   <div class="absolute top-[10%] right-0 -z-10 ">
+      <img src="{{site.baseurl}}assets/img/circle-blog.webp" alt="">
+   </div>
+   <img src="{{section.shape-one}}" alt="" class="absolute left-0 top-[22%] z-[-1]">
+   <img src="{{section.shape-two}}" alt="" class="absolute right-0 top-[40%] z-[-1]">
+</div>

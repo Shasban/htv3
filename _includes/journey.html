@@ -1,0 +1,39 @@
+<section class="relative overflow-hidden  pb-28 pt-20 sm:pt-32 sm:pb-56 " id="journey">
+  <img class="absolute left-1/2 top-1/2 max-w-none translate-x-[-50%] translate-y-[-68%]" src="{{section.journey-img}}"
+    alt="" width="2245" height="1736">
+  <div class="relative">
+    <h2 class="font-custom text-3xl tracking-tight text-white sm:text-4xl font-semibold text-center">
+      {{section.title}} </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-12  align-items-start sm:mt-20 mt-10">
+      <div class="col-span-12 ">
+        <div class="swiper awards-swiper mt-0 h-[500px] sm:h-screen pb-14">
+          <div class="swiper-wrapper h-full">
+            {% for item in section.slides %}
+            {% assign odd = forloop.index | modulo: 2 %}
+            <div class="swiper-slide sm:!h-full">
+              <div class="grid h-full relative">
+                <div
+                  class="text-white px-12 pt-5 row-span-3 absolute {% if odd == 0 %} sm:top-1/2{% else %} sm:bottom-1/2 pb-5  {% endif %}">
+                  {{item.text | markdownify}}
+                </div>
+                <div class="absolute w-full top-3 sm:top-1/2 -translate-y-full row-span-1 row-start-4">
+                  <div class="ltr:text-left rtl:text-right border-b-2 border-white h-10 px-10 relative">
+                    <div
+                      class="rounded-full bg-secondary w-5 h-5 absolute bottom-0 left-0 translate-x-full translate-y-1/2   ">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-button-next text-white hidden sm:flex"></div>
+          <div class="swiper-button-prev text-white hidden sm:flex"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>

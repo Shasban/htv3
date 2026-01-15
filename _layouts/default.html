@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>{{ page.title }} | {{ site.title }} </title>
+  {% seo %}
+  <meta name="theme-color" content="#192bb2">
+  <meta name="description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords}}">
+  {% else%}
+  <meta name="keywords"
+    content="Happy Tenant, HappyTenant, HappyLandlord, Happy Landlord, Owner app, property management app, real estate, Property Management, Management Business Software, Dubai Real Estate, Automation Software, Asset Management, Tenant Management, Landlord Management">
+  {% endif %}
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="icon" type="image/png" href="{{site.baseurl}}assets/img/favicon.webp" />
+  <link rel="preload" as="image" href="{{site.baseurl}}{{page.header.image}}" />
+
+  <!-- Font-Face Definition -->
+  <style>
+    @font-face {
+      font-family: "Lexend";
+      src: url('../assets/fonts/Lexend-Light.ttf') format('truetype');
+      font-weight: 300;
+    }
+
+    @font-face {
+      font-family: "Lexend";
+      src: url('../assets/fonts/Lexend-SemiBold.ttf') format('truetype');
+      font-weight: 600;
+    }
+
+    @font-face {
+      font-family: "Lexend";
+      src: url('../assets/fonts/Lexend-Regular.ttf') format('truetype');
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Lexend";
+      src: url('../assets/fonts/Lexend-Medium.ttf') format('truetype');
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Lexend";
+      src: url('../assets/fonts/Lexend-Bold.ttf') format('truetype');
+      font-weight: 700;
+    }
+
+    body {
+      font-family: "Lexend", sans-serif;
+    }
+  </style>
+
+  <meta property="og:title" content="{{ page.title }} | {{ site.title }}">
+  <meta property="og:description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:image" content="{{site.baseurl}}assets/img/favicon.webp">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }} | {{ site.title }}">
+  <meta name="twitter:description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:image" content="{{site.baseurl}}assets/img/favicon.webp">
+  <meta name="twitter:site" content="@your_twitter_handle">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MTNTCBG');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) - Google Analytics -->
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-57JLPEJ4GD">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-57JLPEJ4GD');
+  </script>
+  <script defer src="https://www.google.com/recaptcha/api.js?render=6Lf0VbYZAAAAANiqgtzCtW5lzQAe2ijDiVcZpSn8"></script>
+</head>
+
+<body class="{{ page.class }}" data-barba="wrapper"  x-data="{ scrollVisible: false, mobileNav: false, openVideo: false, videoUrl: '' }">
+
+  <!-- Back to Top Button -->
+  <div
+    class="z-[11111] group back-to-top fixed right-16 bottom-24 w-12 h-12 rounded-lg flex border border-primary bg-white items-center justify-center cursor-pointer hover:scale-125 transition-all duration-300 ease-in-out"
+    x-show="scrollVisible" @click="window.scrollTo({ top: 0, behavior: 'smooth' });" x-transition x-cloak>
+    <img src="{{ site.baseurl }}assets/img/arrow-up.svg"
+      class="max-h-[60%] group-hover:-translate-y-full transition-all duration-700">
+  </div>
+
+  {{ content }}
+
+  {% include video.html %}
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+  <script defer type="module" src="{{ 'assets/js/app.js' | relative_url }}" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="{{ 'assets/js/vendor/barba.umd.js' | relative_url }}?{{ 'now' | date: '%s' }}"></script>
+  <script type="module" src="{{ 'assets/js/waypoints.min.js' | relative_url }}?{{ 'now' | date: '%s' }}"></script>
+  <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+
+
+  <div x-init="window.addEventListener('scroll', () => { scrollVisible = window.scrollY > 200; })"></div>
+
+  <script>
+    function initMap() {
+      var happytenant = {
+        lat: 25.0683251,
+        lng: 55.1428911
+      };
+      if (document.getElementById("map")) {
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: happytenant,
+        });
+        var marker = new google.maps.Marker({
+          position: happytenant,
+          map: map
+        });
+      }
+    }
+  </script>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmF2iEOMgtqwn_k0xIb4zm1HHw6I_MyK0&callback=initMap"
+    type="text/javascript">
+    </script>
+
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-57JLPEJ4GD"> </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-57JLPEJ4GD');
+  </script>
+
+  <!-- Event snippet for HT lead form submit (1) conversion page -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-11118350238/gfSuCMXCq5IYEJ6f0rUp',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
+</body>
+
+</html>

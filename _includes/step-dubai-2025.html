@@ -1,0 +1,64 @@
+<div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+   <div class="sm:pt-28 pt-0 sm:pb-28 pb-10">
+      <div class="grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-5 md:items-center ">
+         <div>
+            <h1 class="md:pt-0 pt-5  text-3xl md:text-6xl  font-semibold"><span class="md:text-2xl text-lg mb-5 block font-semibold"> Welcome to HappyTenant </span>  GCC's #1 Property Management Solution</h1>
+            <p class="mt-6 max-w-xl font-light text-lg tracking-tight text-slate-500">Transforming Property Management with Smarter, Faster, and Scalable Technology</p>
+         </div>
+         <div class="ml-auto">
+            <img src="assets/img/ht-image.png">
+         </div>
+      </div>
+   </div>
+</div>
+<section class="relative overflow-hidden isolate bg-slate-900 py-10 sm:py-32 ">
+   <div class="">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+         <div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden ring-1 ring-white/5 lg:w-full">
+            <div
+               class="absolute -left-56 top-[calc(100%-13rem)] transform-gpu blur-3xl lg:left-[max(-14rem,calc(100%-59rem))] lg:top-[calc(50%-7rem)]"
+               aria-hidden="true">
+               <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-br from-[#4bfffc] to-[#4f46e5] opacity-30"
+                  style="clip-path: polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%)">
+               </div>
+            </div>
+         </div>
+         <div class="lg:pr-8 lg:pt-4">
+            <div class="text-center">
+               <p class="mt-2 text-3xl font-bold tracking-tight text-gray-200 sm:text-6xl">Why Invest in HappyTenant?</p>
+               <p class="mt-6 text-lg leading-8 font-light text-white max-w-2xl mx-auto">HappyTenant is revolutionizing property management across the GCC, trusted by real estate  leaders to drive efficiency and growth.
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<section 
+   class="relative   py-10 sm:py-32 "   style=" background: linear-gradient(360deg, #3C79FF 12.94%, #2563EA 64.94%);">
+   <div class="relative max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mx-auto text-center xl:max-w-none">
+         <h2 class="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+            {{section.title}}
+         </h2>
+         <p class="mt-6 text-lg tracking-tight text-blue-100">
+            {{section.description}}
+         </p>
+      </div>
+      <div class="md:grid-cols-3 grid-cols-1 grid md:gap-10 gap-5 md:mt-16 mt-10">
+         {% for feature in section.types %}
+         <div class="bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10 group relative rounded-xl p-6 bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10 transition-all duration-300 ease-in-out  hover:scale-105">
+            <h1 class="mb-3 md:text-5xl text-3xl font-semibold tracking-tight text-white counter  ">
+               {{ feature.num }}
+            </h1>
+            <h3 class="font-display text-xl text-white  ">
+               {{ feature.title }}
+            </h3>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+</section>
+<div>
+   <img src="{{section.shape-one}}" alt="" class="absolute left-0 top-[22%] z-[-1]">
+   <img src="{{section.shape-two}}" alt="" class="absolute right-0 top-[10%] z-[-1]">
+</div>

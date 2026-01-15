@@ -1,0 +1,32 @@
+<div class="overflow-hidden bi-white pt-16 sm:pt-32 px-6 sm:px-0">
+  <div class="mx-auto max-w-6xl md:px-6 lg:px-8">
+    <div class="w-full text-center">
+      <h2 class="text-5xl ">{{section.title}}</h2>
+    </div>
+    <p class="text-2xl leading-8 text-gray-600">
+      {{section.subtitle | markdownify}}
+    </p>
+    <dl
+      class="mt-16 text-base leading-7 text-gray-600 lg:max-w-none grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-3 lg:gap-y-8">
+      {% for item in section.differences %}
+      <div class="relative pl-9">
+        <dt class="font-semibold text-gray-900">
+          <svg class="absolute left-0 top-1 h-5 w-5 text-primary" viewBox="0 0 39 39" fill="none">
+            <path
+              d="M35.75 19.5C35.75 28.4741 28.4741 35.75 19.5 35.75C10.5259 35.75 3.25 28.4741 3.25 19.5C3.25 10.5259 10.5259 3.25 19.5 3.25C28.4741 3.25 35.75 10.5259 35.75 19.5Z"
+              fill="currentColor" />
+            <path
+              d="M28.1011 11.8511L17.0754 22.8897L12.5238 18.3511L10.2261 20.6488L17.0787 27.4852L30.3996 14.1488L28.1011 11.8511Z"
+              fill="#D9E0F8" />
+          </svg>
+        <dd class="text-xl font-bold mb-2">{{item.title}}</dd>
+        </dt>
+        <dd>{{item.text | markdownify}}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+
+
+
+  </div>
+</div>

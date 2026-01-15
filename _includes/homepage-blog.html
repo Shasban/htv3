@@ -1,0 +1,48 @@
+{% assign homepageblog = section.homepageblog %}
+<section class="relative bg-white  py-20 sm:py-32">
+   <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="md:text-center">
+         <h2 class="font-custom text-xl tracking-tight text-slate-900 sm:text-4xl font-semibold">
+            {{section.title}}
+         </h2>
+         <p class="mt-4 text-lg tracking-tight text-slate-700">
+            {{section.description}}
+         </p>
+      </div>
+      <div class="mt-16">
+         <div class="transition-opacity duration-500 ease-in-out">
+            <div class="grid md:grid-cols-3 md:gap-10 gap-5 md:mt-20 mt-10">
+               {% for post in site.posts | limit: 3 %}
+               <div class="relative" data-aos="fade-up" data-aos-duration="1000"
+                  data-aos-delay="{{forloop.index | times: 150}}">
+                  <div class="relative">
+
+                     <a href="{{ post.url | absolute_url }}" class="absolute inset-0"></a>
+                     <img src="{{site.baseurl}}{{post.photo}}" alt="{{post.title}}" class="w-full pb-3 rounded-xl">
+                  </div>
+                  <div class="flex items-center justify-between py-2">
+                     <div class="flex items-center gap-3">
+                        <!-- <img src="{{ post.user-icon }}" alt="" class="h-5">
+                        <p class="text-primary-100 text-xs mb-0">Nabeel</p> -->
+                        <p class="text-primary-400 text-xs mb-0"> {{ post.date | date: "%F" }} </p>
+                     </div>
+                     <div>
+                        <a href="{{site.baseurl}}categories/{{post.categories}}"
+                           class="bg-primary-200 py-1 rounded-[20px] px-3 text-secondary text-xs">
+                           {{post.categories}}</a>
+                     </div>
+                  </div>
+                  <div class="relative">
+                     <a href="{{ post.url | absolute_url }}" class="absolute inset-0"></a>
+                     <h1 class="pb-3 text-primary-300 font-medium md:text-xl text-lg">{{ post.title }}</h1>
+                     <div class="text-primary-400 md:text-base text-sm font-light">
+                        {{ post.text | markdownify }}
+                     </div>
+                  </div>
+               </div>
+               {% endfor %}
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

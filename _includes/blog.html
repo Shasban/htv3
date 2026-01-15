@@ -1,0 +1,73 @@
+<div class="px-6  sm:py-32 py-10 lg:px-8 relative overflow-hidden">
+   <div class="max-w-7xl mx-auto">
+
+      <div class="relative">
+         <img class="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-0%] z-[-1]"
+            src="./assets/img/testimonials.webp" alt="" width="2245" height="1636">
+         <div class="md:mt-32">
+            <h1 class="font-custom text-xl tracking-tight text-slate-900 sm:text-4xl font-semibold">
+               {{section.explore-categories}}</h1>
+            <div class="mt-5">
+
+               <div class="mt-4">
+                  <div class="transition-opacity duration-500 ease-in-out">
+                     <div class="grid md:grid-cols-3 md:gap-10 gap-5 md:mt-20 mt-10">
+                        {% for post in site.posts %}
+                        <div class="relative">
+                           {% if post.photo %}
+                           <div class="relative">
+
+                              <a href="{{ post.url | absolute_url }}" class="absolute inset-0"></a>
+                              <img src="{{site.baseurl}}{{post.photo}}" alt="{{post.title}}"
+                                 class="w-full  rounded-xl h-[220px]">
+                           </div>
+                           {% endif %}
+                           <div class="flex items-center justify-between py-2">
+                              <div class="flex items-center gap-3">
+                                 <!-- <img src="{{ post.user-icon }}" alt="" class="h-5">
+                                 <p class="text-primary-100 text-xs mb-0">Nabeel</p> -->
+                                 <p class="text-primary-400 text-xs mb-0"> {{ post.date | date: "%F" }} </p>
+                              </div>
+                              <div>
+                                 <a href="{{site.baseurl}}categories/{{post.categories}}"
+                                    class="bg-primary-200 py-1 rounded-[20px] px-3 text-secondary text-xs">
+                                    {{post.categories}}</a>
+                              </div>
+                           </div>
+                           <div class="relative">
+                              <a href="{{ post.url | absolute_url }}" class="absolute inset-0"></a>
+                              <h1 class="pb-3 text-primary-300 font-medium md:text-xl text-lg">{{ post.title }}</h1>
+                              <div class="text-primary-400 md:text-base text-sm font-light">
+                                 {{ post.text | markdownify }}
+                              </div>
+                           </div>
+                        </div>
+                        {% endfor %}
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- <div class="md:mt-32">
+            <h1 class="font-custom text-xl tracking-tight text-slate-900 sm:text-4xl font-semibold">
+               {{section.explore-categories}}</h1>
+            <div class="mt-5 flex gap-3 flex-wrap">
+               {% for item in section.explore-categories-list %}
+
+               <button type="button" class="px-4 py-2  rounded-full bg-white text-primary">
+                  {{ item.text }}
+               </button>
+
+               {% endfor %}
+            </div>
+         </div> -->
+      </div>
+   </div>
+</div>
+<div>
+   <div class="absolute top-[10%] right-0 -z-10 ">
+      <img src="{{site.baseurl}}assets/img/circle-blog.webp" alt="">
+   </div>
+   <img src="{{section.shape-one}}" alt="" class="absolute left-0 top-[22%] z-[-1]">
+   <img src="{{section.shape-two}}" alt="" class="absolute right-0 top-[40%] z-[-1]">
+</div>

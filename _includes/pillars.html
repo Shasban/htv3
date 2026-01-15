@@ -1,0 +1,18 @@
+<div class="max-w-4xl mx-auto mt-32">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 px-6 mt-20">
+    {% for item in section.pillars %}
+    <flex
+      class="{% if item.col_span == 1 %} col-span-1 sm:col-span-1 {% else %} col-span-1 sm:col-span-2 {% endif %} flex-col h-full text-center">
+      <div
+        class="rounded-2xl bg-white  p-6 lg:p-10 shadow-lg ring-gray-900/5 flex {% if item.col_span == 1 %} flex-col {% else %} flex-col sm:flex-row {% endif %} items-center justify-center h-full">
+        <div>
+          <h4 class="text-base font-extralight mt-4">{{item.subtitle}}</h4>
+          <h3 class="text-3xl ">{{item.title}}</h3>
+          <a class="text-xs font-light text-primary" href="#"> {{site.data.shared.learn_more}}</a>
+        </div>
+        <img class="h-64 mt-6 sm:mt-0" src="{{item.image}}" alt="{{item.title}}">
+      </div>
+    </flex>
+    {% endfor %}
+  </div>
+</div>

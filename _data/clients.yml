@@ -1,0 +1,280 @@
+- name: Allsopp & Allsopp
+  logo: assets/img/clients/allsopp-and-allsopp.svg
+
+- name: genral authority
+  logo: assets/img/clients/genral-authority.png
+
+- name: Provident Real Estate
+  logo: assets/img/clients/provident.webp
+
+- name: Savills
+  logo: assets/img/clients/savills.svg
+
+- name: Aljalila
+  logo: assets/img/clients/aljalila.webp
+
+- name: Emirates Swiss
+  logo: assets/img/clients/emirates-swiss.jpeg
+
+- name: AMCRE
+  logo: assets/img/clients/AMCRE.png
+
+- name: ned
+  logo: assets/img/clients/ned.png
+
+- name: Fortuna
+  logo: assets/img/clients/Fortuna.png
+
+- name: Al Areen
+  logo: assets/img/clients/Al-areen.png
+
+
+- name: haya
+  logo: assets/img/clients/haya.png
+
+- name: Keymax
+  logo: assets/img/clients/Keymax.png
+
+- name: ramos
+  logo: assets/img/clients/ramos.png
+
+- name: thinkers
+  logo: assets/img/clients/thinkers.png
+
+- name: VERR & SANT
+  logo: assets/img/clients/veer_and_sant.jpeg
+
+- name: Primelinks
+  logo: assets/img/clients/primelinks.png
+
+- name: wow-property
+  logo: assets/img/clients/wow-property.jpg
+
+- name: ren-aissance
+  logo: assets/img/clients/ren-aissance.png
+
+- name: Agon
+  logo: assets/img/clients/Agon.png
+
+- name: AX Capital
+  logo: assets/img/clients/ax-capital.png
+
+- name: Dubai Real Estate
+  logo: assets/img/clients/Dubai Real Estate.webp
+
+- name: ADCS
+  logo: assets/img/clients/ADCS.png
+
+- name: My Greek Vacations
+  logo: assets/img/clients/my_vacations.webp
+
+- name: masaood
+  logo: assets/img/clients/masaood.png
+
+- name: raywhite
+  logo: assets/img/clients/raywhite.jpeg
+
+- name: sultan
+  logo: assets/img/clients/sultan.jpeg
+
+- name: sinogulf
+  logo: assets/img/clients/sinogulf.png
+
+- name: Nest
+  logo: assets/img/clients/nest.webp
+
+- name: Metropolitan Premium Properties
+  logo: assets/img/clients/metropolitan_premium_properties.webp
+
+- name: Mkey Property Solutions
+  logo: assets/img/clients/mkey.webp
+
+- name: Al Shebani
+  logo: assets/img/clients/Al Shebani.webp
+
+- name: Espace Real Estate
+  logo: assets/img/clients/espace_real_estate.webp
+
+- name: Rawasi Real Estate
+  logo: assets/img/clients/rawasi.webp
+
+- name: Al Sari Real Estate
+  logo: assets/img/clients/Al Sari Real Estate.webp
+
+- name: Barclay James & Co Real Estate
+  logo: assets/img/clients/Barclay-and-James.png
+
+- name: Benkaram Tower
+  logo: assets/img/clients/Benkaram Tower.webp
+
+- name: Nesbitt Group of Companies
+  logo: assets/img/clients/Nesbitt.webp
+
+- name: Novvi Properties
+  logo: assets/img/clients/Novvi.webp
+
+- name: Penthouse Properties LLC
+  logo: assets/img/clients/Penthouse.webp
+
+- name: Smart Crowd
+  logo: assets/img/clients/Smart Crowd.webp
+
+- name: Aljalila
+  logo: assets/img/clients/aljalila.webp
+
+- name: Ikigai
+  logo: assets/img/clients/ikigai.webp
+
+- name: Move-In
+  logo: assets/img/clients/move-in.webp
+
+- name: Mr. Cian
+  logo: assets/img/clients/aurora.webp
+
+- name: ET Logo
+  logo: assets/img/clients/et_logo.webp
+
+- name: ALRO
+  logo: assets/img/clients/alro.png
+
+- name: aspen
+  logo: assets/img/clients/aspen-crp.png
+
+- name: azco
+  logo: assets/img/clients/azco.png
+
+- name: bartawi
+  logo: assets/img/clients/bartawi.webp
+
+- name: Bespoke Luxury Management
+  logo: assets/img/clients/BespokeLuxuryManagement.webp
+
+- name: bluechip
+  logo: assets/img/clients/bluechip.png
+
+- name: buildwell
+  logo: assets/img/clients/buildwell.png
+
+- name: cropped CPM
+  logo: assets/img/clients/cropped-CPM.png
+
+- name: dg homes
+  logo: assets/img/clients/dg-homes.webp
+
+- name: fanni
+  logo: assets/img/clients/fanni.svg
+
+- name: Footprint-Real-Estate
+  logo: assets/img/clients/Footprint-Real-Estate.svg
+
+- name: grand estate
+  logo: assets/img/clients/grand-estate.png
+
+- name: hs realestate
+  logo: assets/img/clients/hs-realestate.png
+
+- name: mygreek
+  logo: assets/img/clients/mygreek.png
+
+- name: Evertree II ISPV Limited
+  logo: assets/img/clients/evertree.webp
+
+- name: hbs
+  logo: assets/img/clients/hbs-logo-dubai.png
+
+- name: hooh
+  logo: assets/img/clients/hooh.png
+
+- name: ikigaire
+  logo: assets/img/clients/ikigaire.svg
+
+- name: discovery dunes
+  logo: assets/img/clients/discovery_dunes.webp
+  class: "bg-primary-300"
+
+- name: fidu
+  logo: assets/img/clients/fidu.webp
+  class: "bg-primary-300"
+
+- name: ihcuae
+  logo: assets/img/clients/ihcuae.png
+  class: "bg-primary-300"
+
+- name: koa
+  class: "bg-primary-300"
+  logo: assets/img/clients/koa.svg
+
+- name: Maison Carree
+  logo: assets/img/clients/Maison-Carree.png
+  class: "bg-primary-300"
+
+- name: mbal
+  logo: assets/img/clients/mbal.png
+  class: "bg-primary-300"
+
+- name: palmon
+  logo: assets/img/clients/palmon.png
+  class: "bg-primary-300"
+
+- name: sebastianand
+  logo: assets/img/clients/sebastianand.png
+  class: "bg-primary-300"
+
+- name: Unique-Properties
+  logo: assets/img/clients/Unique-Properties.png
+  class: "bg-primary-300"
+
+- name: tycoon
+  logo: assets/img/clients/tycoon.png
+  class: "bg-primary-300"
+
+- name: Luxfolio
+  logo: assets/img/clients/Luxfolio-Logo.webp
+
+- name: Horizontal
+  logo: assets/img/clients/Horizontal.png
+
+- name: jmh
+  logo: assets/img/clients/jmh.webp
+
+- name: luxesignature
+  logo: assets/img/clients/luxesignature.png
+
+- name: mahenti
+  logo: assets/img/clients/mahenti.png
+
+- name: metropolitan
+  logo: assets/img/clients/metropolitan.png
+
+- name: raku
+  logo: assets/img/clients/raku.png
+
+- name: promoseven
+  logo: assets/img/clients/promoseven.webp
+
+- name: orville_realestate
+  logo: assets/img/clients/orville_realestate.jpeg
+
+- name: ruya
+  logo: assets/img/clients/ruya.png
+
+- name: seven
+  logo: assets/img/clients/seven.jpeg
+
+- name: solanki
+  logo: assets/img/clients/solanki.png
+
+- name: stonehouse
+  logo: assets/img/clients/stonehouse_realestate_logo.jpeg
+
+- name: unified
+  logo: assets/img/clients/unified.jpeg
+
+- name: white-co
+  logo: assets/img/clients/white-co.png
+
+- name: optimum-nest
+  logo: assets/img/clients/optimum-nest.png
+
+- name: Asmani Invesment
+  logo: assets/img/clients/asmani invesment.webp
